@@ -12,7 +12,7 @@ os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
 class ChatBot():
 	
 	def __init__(self, enc_embed_dim = 20, dec_embed_dim = 20
-				,epoches = 10, batch_size = 128, learning_rate = 0.01
+				,epoches = 10, batch_size = 10, learning_rate = 0.01
 				,n_enc_hidden = [20,20], n_dec_hidden = [20,20]):
 		'''
 		初始化方法
@@ -434,7 +434,7 @@ class ChatBot():
 
 if __name__ == '__main__':
 	if len(sys.argv) < 2:
-		print('Params should equal 3. Example: python ChatBot.py <train/predict>')
+		print('Params should equal 2. Example: python ChatBot.py <train/predict>')
 	if sys.argv[1] == 'train':
 		path = 'data/xiaohuangji50w_nofenci.conv'
 		chatBot = ChatBot()
